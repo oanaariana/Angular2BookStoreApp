@@ -8,10 +8,19 @@ import { Book } from '../book.model';
 })
 export class BookFormComponent implements OnInit {
   model = new Book(1, '', '', 'http://');
-
+  newBook() {
+    return JSON.stringify(this.model);
+  }
   constructor() { }
 
   ngOnInit() {
+  }
+
+  submitted = false;
+
+  onSubmit() {
+    console.log("submit");
+    this.submitted = true;
   }
 
   get currentBook() { return JSON.stringify(this.model); }
