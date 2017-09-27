@@ -22,7 +22,4 @@ export class BookFormComponent implements OnInit {
     console.log("submit");
     this.submitted = true;
   }
-
-  get currentBook() { return JSON.stringify(this.model); }
-
 }
